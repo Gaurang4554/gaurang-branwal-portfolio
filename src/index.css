@@ -22,6 +22,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-variant-ligatures: common-ligatures;
 }
 
 /* Custom scrollbar */
@@ -219,6 +221,23 @@ textarea:focus {
 /* Enhanced shadow utilities */
 .shadow-3xl {
   box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Text rendering improvements */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+}
+
+p, span, div {
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure proper text display */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* High contrast mode support */

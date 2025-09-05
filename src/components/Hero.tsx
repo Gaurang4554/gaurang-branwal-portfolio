@@ -112,11 +112,11 @@ const Hero: React.FC = () => {
                 Gaurang Baranwal
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed font-medium">
               Computer Science student specializing in{' '}
               <span className="text-blue-600 dark:text-blue-400 font-semibold">AI & Machine Learning</span>
             </p>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-12">
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 font-normal">
               Passionate about creating intelligent solutions and pushing the boundaries of technology.
               Currently pursuing B.Tech at UPES Dehradun.
             </p>

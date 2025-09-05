@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
         { name: 'CSS', level: 85, color: 'from-blue-400 to-blue-600' },
         { name: 'Node.js', level: 80, color: 'from-green-500 to-green-600' },
         { name: 'React', level: 83, color: 'from-cyan-400 to-blue-500' },
-        { name: 'VS Code', level: 95, color: 'from-blue-500 to-purple-600' }
+        { name: 'VS Code', level: 90, color: 'from-blue-500 to-purple-600' }
       ],
       gradient: 'from-blue-500 to-cyan-500',
       bgColor: 'from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20'

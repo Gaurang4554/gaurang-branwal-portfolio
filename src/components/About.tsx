@@ -44,19 +44,33 @@ const About: React.FC = () => {
           <div className="space-y-6">
             {/* Profile Image */}
             <div className="flex justify-center lg:justify-start mb-8">
-              <div className="relative">
-                <div className="w-48 h-48 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 p-1">
+              <div className="relative group">
+                {/* Animated background glow */}
+                <div className="absolute inset-0 w-48 h-48 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
+                
+                {/* Main image container */}
+                <div className="relative w-48 h-48 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 p-1 group-hover:shadow-2xl group-hover:scale-105 transition-all duration-500 ease-out">
                   <div className="w-full h-full rounded-full overflow-hidden">
                     <img
-                      src="/Profile.jpg"
+                      src="./Profile.jpg"
                       alt="Gaurang Baranwal"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                     />
+                    
+                    {/* Overlay effect on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                 </div>
-                <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">AI/ML</span>
+                
+                {/* AI/ML Badge with enhanced animation */}
+                <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <span className="text-white text-sm font-bold group-hover:text-lg transition-all duration-300">AI/ML</span>
                 </div>
+                
+                {/* Floating decorative elements */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-pulse opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute top-4 -left-2 w-3 h-3 bg-pink-400 rounded-full animate-ping opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-4 -left-3 w-2 h-2 bg-purple-400 rounded-full animate-bounce opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '1.5s' }}></div>
               </div>
             </div>
             <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">

@@ -124,18 +124,30 @@ const Hero: React.FC = () => {
 
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
+            <div className="relative group animate-float">
+              {/* Animated background glow */}
+              <div className="absolute inset-0 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
+              
+              {/* Main image container */}
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 group-hover:shadow-3xl group-hover:scale-105 transition-all duration-500 ease-out">
                 <img
-                  src="/Profile.jpg"
+                  src="./Profile.jpg"
                   alt="Gaurang Baranwal"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
+                
+                {/* Overlay effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-cyan-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+              
+              {/* Floating decorative elements with enhanced animations */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-bounce shadow-lg group-hover:animate-spin transition-all duration-300"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-pulse shadow-lg group-hover:scale-125 transition-all duration-300" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-ping shadow-lg group-hover:animate-bounce transition-all duration-300" style={{ animationDelay: '2s' }}></div>
+              
+              {/* Additional floating elements */}
+              <div className="absolute -top-2 -left-2 w-3 h-3 bg-yellow-400 rounded-full animate-pulse opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '0.5s' }}></div>
+              <div className="absolute bottom-8 -right-2 w-2 h-2 bg-pink-400 rounded-full animate-ping opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '1.5s' }}></div>
             </div>
           </div>
         </div>

@@ -100,14 +100,14 @@ const Hero: React.FC = () => {
         style={{ zIndex: 1 }}
       />
       
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-16 lg:pt-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-in-up">
             <p className="text-lg sm:text-xl text-blue-600 dark:text-blue-400 font-medium mb-4">
               Hello, I'm
             </p>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-800 bg-clip-text text-transparent">
                 Gaurang Baranwal
               </span>
@@ -123,13 +123,13 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="flex justify-center lg:justify-end animate-fade-in-up mt-8 lg:mt-0" style={{ animationDelay: '0.2s' }}>
             <div className="relative group animate-float">
               {/* Animated background glow */}
-              <div className="absolute inset-0 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
+              <div className="absolute inset-0 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
               
               {/* Main image container */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 group-hover:shadow-3xl group-hover:scale-105 transition-all duration-500 ease-out">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 group-hover:shadow-3xl group-hover:scale-105 transition-all duration-500 ease-out">
                 <img
                   src="./Profile.jpg"
                   alt="Gaurang Baranwal"
@@ -141,13 +141,13 @@ const Hero: React.FC = () => {
               </div>
               
               {/* Floating decorative elements with enhanced animations */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-bounce shadow-lg group-hover:animate-spin transition-all duration-300"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-pulse shadow-lg group-hover:scale-125 transition-all duration-300" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-ping shadow-lg group-hover:animate-bounce transition-all duration-300" style={{ animationDelay: '2s' }}></div>
+              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-bounce shadow-lg group-hover:animate-spin transition-all duration-300"></div>
+              <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-pulse shadow-lg group-hover:scale-125 transition-all duration-300" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/2 -left-6 sm:-left-8 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-ping shadow-lg group-hover:animate-bounce transition-all duration-300" style={{ animationDelay: '2s' }}></div>
               
               {/* Additional floating elements */}
-              <div className="absolute -top-2 -left-2 w-3 h-3 bg-yellow-400 rounded-full animate-pulse opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '0.5s' }}></div>
-              <div className="absolute bottom-8 -right-2 w-2 h-2 bg-pink-400 rounded-full animate-ping opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '1.5s' }}></div>
+              <div className="absolute -top-1 -left-1 sm:-top-2 sm:-left-2 w-2 h-2 sm:w-3 sm:h-3 bg-yellow-400 rounded-full animate-pulse opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '0.5s' }}></div>
+              <div className="absolute bottom-6 sm:bottom-8 -right-1 sm:-right-2 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-400 rounded-full animate-ping opacity-60 group-hover:opacity-100 transition-opacity duration-300" style={{ animationDelay: '1.5s' }}></div>
             </div>
           </div>
         </div>

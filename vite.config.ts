@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // This should match your repository name if it's not a user/organization page
+  base: '/gaurang-branwal-portfolio/', // Repository name for GitHub Pages
   optimizeDeps: {
     exclude: ['lucide-react'],
   },

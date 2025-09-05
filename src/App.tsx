@@ -11,6 +11,7 @@ import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
@@ -22,6 +23,11 @@ function App() {
     } else {
       setDarkMode(false);
     }
+    
+    // Set loading to false after a short delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -37,6 +43,17 @@ function App() {
   }, [darkMode]);
 
   const toggleTheme = () => setDarkMode(!darkMode);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600 dark:text-gray-400">Loading Portfolio...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
